@@ -26,8 +26,4 @@ The portfolio features a range of projects including:
 - Node.js (Latest LTS recommended)
 - A Gemini API Key from [Google AI Studio](https://aistudio.google.com/)
 
-### Installation
-1. **Clone the repository:**
-   ```bash
-   git [email protected]:nkabalazakazimla/My-Professional-Portfolio.git
-   cd My-Professional-Portfolio
+
