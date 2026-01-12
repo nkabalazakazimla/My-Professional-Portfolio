@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Download, Mail, Linkedin, Github, ChevronDown, GraduationCap, Briefcase, Copy, Check, ArrowUp } from 'lucide-react';
+import { Menu, X, Download, Mail, Linkedin, Github, ChevronDown, GraduationCap, Briefcase, Copy, Check, ArrowUp, User } from 'lucide-react';
 import { PERSONAL_INFO, PROJECTS, SKILLS, SOCIALS } from './constants';
 import ProjectCard from './components/ProjectCard';
 import ProjectModal from './components/ProjectModal';
@@ -10,6 +10,7 @@ function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [activeSection, setActiveSection] = useState('about');
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [profileImgError, setProfileImgError] = useState(false);
   
   // Filter state
   const [filter, setFilter] = useState<string>('All');
@@ -67,7 +68,7 @@ function App() {
   // Scroll Handling (Reveal, Active Section, Back To Top)
   useEffect(() => {
     const handleScroll = () => {
-      // Back to top visibility - Show after 500px scroll
+      // Back to top visibility
       setShowBackToTop(window.scrollY > 500);
 
       // Active Section Detection
@@ -88,7 +89,7 @@ function App() {
 
     window.addEventListener('scroll', handleScroll);
     
-    // Initial Reveal Observer setup
+    // Reveal Observer setup
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -110,7 +111,7 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
       observer.disconnect();
     };
-  }, [selectedProject, filter]); // Re-run if filter changes to catch new elements
+  }, [selectedProject, filter]);
 
   return (
     <div className="min-h-screen bg-cream text-textBody selection:bg-dustyRose selection:text-white relative font-sans">
@@ -171,7 +172,7 @@ function App() {
         )}
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero Section - Reverted to Centered */}
       <section className="pt-32 pb-20 md:pt-48 md:pb-32 px-6 container mx-auto">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-textDark tracking-tight leading-tight min-h-[1.2em]">
@@ -203,24 +204,27 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - Profile Image back next to About me */}
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-start gap-16 max-w-6xl mx-auto">
-             <div className="w-full md:w-1/3 relative reveal sticky top-24">
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-linen relative z-10 shadow-lg border-4 border-white">
-                   <img 
-                    src={PERSONAL_INFO.profileImage} 
-                    alt={`${PERSONAL_INFO.name} Profile`} 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=800"; // Fallback placeholder
-                    }}
-                   />
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-12 lg:gap-16 max-w-6xl mx-auto">
+             <div className="w-full max-w-[320px] md:w-1/3 relative reveal sticky top-24">
+                <div className="aspect-square rounded-2xl overflow-hidden bg-linen relative z-10 shadow-lg border-4 border-white flex items-center justify-center">
+                   {!profileImgError ? (
+                     <img 
+                      src={PERSONAL_INFO.profileImage} 
+                      alt={`${PERSONAL_INFO.name} Profile`} 
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
+                      onError={() => setProfileImgError(true)}
+                     />
+                   ) : (
+                     <div className="w-full h-full flex items-center justify-center bg-linen text-dustyRose/20">
+                       <User size={120} strokeWidth={0.5} />
+                     </div>
+                   )}
                 </div>
-                {/* Decorative element - Using Dusty Rose */}
-                <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-dustyRose rounded-2xl -z-0"></div>
+                {/* Decorative Frame */}
+                <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-dustyRose rounded-2xl -z-0"></div>
              </div>
              
              <div className="w-full md:w-2/3 reveal" style={{ transitionDelay: '200ms' }}>
@@ -327,7 +331,6 @@ function App() {
               A curated selection of AI models and web applications developed during the CAPACITI AI bootcamp.
             </p>
             
-            {/* Project Filters */}
             <div className="flex flex-wrap justify-center gap-2 mb-8">
               {categories.map((cat) => (
                 <button
@@ -395,10 +398,6 @@ function App() {
                    </h3>
                 </div>
 
-                <p className="text-stone-400 text-xs max-w-sm mx-auto leading-relaxed">
-                  Copy my email address below and reach out via your preferred mail client.
-                </p>
-
                 <div className="mt-2">
                    <button 
                      onClick={copyEmail}
@@ -447,7 +446,6 @@ function App() {
         <ArrowUp size={20} />
       </button>
 
-      {/* Modals & Overlays */}
       <ProjectModal 
         project={selectedProject} 
         onClose={() => setSelectedProject(null)} 

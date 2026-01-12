@@ -24,7 +24,7 @@ export const PERSONAL_INFO = {
   ],
   email: "nkabalazakazimla@gmail.com",
   cvLink: "https://capeitinitiative-my.sharepoint.com/:b:/g/personal/kazimla_nkabalaza_capaciti_org_za/IQDb0rkG7cAiS7YHWwkfrCr4AVXEtbSs5naImZcSUj70k_g?e=THMN8T",
-  profileImage: "https://media.licdn.com/dms/image/v2/D4D03AQEGbjMW3yT3bQ/profile-displayphoto-crop_800_800/B4DZqXgNu2KQAM-/0/1763478398319?e=1767225600&v=beta&t=dqLDcbNWsXcZqYc8YFajj2Atvjz8pCrtWefnppCCOIM",
+  profileImage: "https://github.com/nkabalazakazimla/My-Professional-Portfolio/raw/4662a84106c1e6f26fd2638d960b1d7596a83955/Image%20(4).jpg",
   about: `IT enthusiast with hands-on experience in hardware troubleshooting, software support, basic networking, and data visualization using Power BI. Proficient in Microsoft Office 365 with strong communication and problem-solving skills. I am currently a Digital Associate at CAPACITI, undergoing intensive training in AI and Workday Business Intelligence, preparing for upcoming integration into a host company environment to apply these enterprise skills.`,
 };
 
