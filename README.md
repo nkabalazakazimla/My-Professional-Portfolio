@@ -3,9 +3,8 @@
 
 
 <p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmt2bHBuMDllamZxaGZxN2JwdXZ6Zmgxdjh4cWh0NnM0cXJ0dHQ3MiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/and6F22z8LTpVvqtbN/giphy.gif" width="140" alt="Graduation Cap GIF">
+  <img src="https://i.gifer.com/origin/48/482d7a8f50fcfa813b501a4d424684d5_w200.gif" alt="Graduation Cap GIF" width="150">
 </p>
-
 
 ### About
 
