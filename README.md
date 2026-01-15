@@ -1,20 +1,37 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Run and deploy your AI Studio app
+# 🧠 Professional Portfolio — Kazimla Nkabalaza
 
-This contains everything you need to run your app locally.
+<p align="center">
+  <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" width="90" alt="Graduation Icon"/>
+</p>
 
-View your app in AI Studio: https://ai.studio/apps/drive/11ut-aq307yTMLFlYUGnxSTYk4_D5Ghie
+### About
 
-## Run Locally
+This repository is my professional portfolio, showcasing the specialized **AI and Machine Learning projects** I developed during my intensive bootcamp with **CAPACITI**. As I continue advancing my professional development within the organization, this collection highlights the technical models, intelligent systems, and data‑driven solutions I’ve designed to date.
 
-**Prerequisites:**  Node.js
+My work reflects structured learning, practical experimentation, and a growing commitment to building technology that solves real problems with clarity and purpose. Each project serves as a marker of the skills I’m sharpening and the direction I’m shaping in the AI and Machine Learning space.
+
+---
+
+### 📂 What You’ll Find Here
+- Machine learning models developed during structured training  
+- End‑to‑end AI solutions based on real problem statements  
+- Technical experiments focused on prediction, automation, and optimization  
+- Clean, well‑documented notebooks and reproducible workflows  
+
+---
+
+### 🎯 Purpose of This Portfolio
+This repository is both a showcase and a record of growth. It reflects:  
+- Continuous upskilling  
+- Applied problem‑solving  
+- A methodical approach to building intelligent systems  
+
+---
+
+### 📧 Contact
+For professional inquiries or collaboration:  
+**Kazimla Nkabalaza**  
+(nkabalazakazimla@gmail.com)
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
