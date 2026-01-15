@@ -1,9 +1,11 @@
 
 # 🧠 Professional Portfolio — Kazimla Nkabalaza
 
+
 <p align="center">
-  <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" width="90" alt="Graduation Icon"/>
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmt2bHBuMDllamZxaGZxN2JwdXZ6Zmgxdjh4cWh0NnM0cXJ0dHQ3MiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/and6F22z8LTpVvqtbN/giphy.gif" width="140" alt="Graduation Cap GIF">
 </p>
+
 
 ### About
 
@@ -21,13 +23,6 @@ My work reflects structured learning, practical experimentation, and a growing c
 
 ---
 
-### 🎯 Purpose of This Portfolio
-This repository is both a showcase and a record of growth. It reflects:  
-- Continuous upskilling  
-- Applied problem‑solving  
-- A methodical approach to building intelligent systems  
-
----
 
 ### 📧 Contact
 For professional inquiries or collaboration:  
