@@ -1,5 +1,5 @@
 
-# 🧠 Professional Portfolio — Kazimla Nkabalaza
+# Professional Portfolio — Kazimla Nkabalaza
 
 
 <p align="center">
